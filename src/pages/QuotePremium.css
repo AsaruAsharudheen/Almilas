@@ -32,7 +32,7 @@ body {
 }
 
 .logo {
-  width: 150px;
+  width: 250px;
 }
 
 .contact {
@@ -50,6 +50,7 @@ body {
 
 .info {
   display: grid;
+  margin-top: 40px;
   grid-template-columns: 1fr 1fr;
   border: 1px solid #c9a13a;
 }

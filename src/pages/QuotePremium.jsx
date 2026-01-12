@@ -181,7 +181,6 @@ export default function QuotePremium() {
                   </div>
                 </div>
 
-                <h1 className="title">CATERING QUOTATION</h1>
 
                 <div className="info">
                   <div>DATE : {form.date}</div>
