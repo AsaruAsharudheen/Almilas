@@ -1,10 +1,10 @@
 import './App.css';
-import QuotePage from './pages/QuotePage/QuotePage';
+import QuotePremium from './pages/QuotePremium';
 
 const App = () => {
   return (
     <>
-      <QuotePage />
+      <QuotePremium />
     </>
   );
 };
