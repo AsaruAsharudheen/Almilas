@@ -3,176 +3,129 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-  background:#ececec;
+  background:#ededed;
 }
 
-/* ================= MAIN LAYOUT ================= */
+/* MAIN */
 .main-wrapper{
   padding:20px;
   display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  flex-wrap:wrap;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
 }
 
-/* ================= FORM STYLE ================= */
+/* ================= FORM ================= */
 
 .form-box{
   width:420px;
-  background:#ffffff;
+  background:#fff;
   padding:25px;
-  border-radius:12px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+  border:1px solid #ccc;
+  box-shadow:0 5px 15px rgba(0,0,0,0.15);
 }
 
 .form-box h2{
   text-align:center;
   margin-bottom:15px;
   color:#1f7f3f;
-  font-weight:700;
+  letter-spacing:3px;
+  text-decoration:underline;
 }
 
 .form-box input{
   width:100%;
   padding:10px;
   margin:6px 0;
-  border:1px solid #ccc;
-  border-radius:6px;
+  border:1px solid #999;
   font-size:14px;
-  transition:0.3s;
-}
-
-.form-box input:focus{
-  border-color:#1f7f3f;
-  outline:none;
-  box-shadow:0 0 5px rgba(31,127,63,0.4);
 }
 
 .form-box button{
   width:100%;
   margin-top:20px;
   padding:12px;
-  background:linear-gradient(135deg,#1f7f3f,#2ecc71);
-  color:white;
+  background:#1f7f3f;
+  color:#fff;
   border:none;
-  font-size:16px;
-  border-radius:30px;
+  font-size:15px;
   cursor:pointer;
-  font-weight:600;
-  transition:0.3s;
 }
 
-.form-box button:hover{
-  transform:scale(1.03);
-  box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* ================= CHECKBOX GROUP STYLE ================= */
+/* ================= CHECKBOX ================= */
 
 .checkbox-group{
   margin:12px 0;
-  padding:12px;
-  border-radius:10px;
-  background:linear-gradient(135deg,#f9f9f9,#ffffff);
-  border:1px solid #e1e1e1;
+  padding:10px;
+  border:1px solid #ccc;
+  background:#fafafa;
 }
 
 .checkbox-group h4{
-  margin-bottom:8px;
+  font-size:13px;
   color:#1f7f3f;
-  font-size:14px;
-  font-weight:600;
-  border-bottom:1px dashed #1f7f3f;
-  padding-bottom:4px;
+  margin-bottom:6px;
+  letter-spacing:2px;
+  text-decoration:underline;
 }
 
 .checkbox-group label{
   display:flex;
   align-items:center;
   font-size:13px;
+  margin:4px 0;
   cursor:pointer;
-  margin:5px 0;
-  padding:6px;
-  border-radius:6px;
-  transition:0.2s;
 }
 
-.checkbox-group label:hover{
-  background:#e9f7ef;
-}
-
-/* CUSTOM CHECKBOX */
 .checkbox-group input{
   appearance:none;
-  -webkit-appearance:none;
-  width:18px;
-  height:18px;
+  width:16px;
+  height:16px;
   border:2px solid #1f7f3f;
-  border-radius:4px;
-  margin-right:8px;
-  position:relative;
-  cursor:pointer;
+  margin-right:6px;
 }
 
 .checkbox-group input:checked{
   background:#1f7f3f;
 }
 
-.checkbox-group input:checked::after{
-  content:"✔";
-  color:white;
-  font-size:12px;
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-}
-
 /* ================= DOWNLOAD BUTTONS ================= */
 
 .download-buttons{
-  width:100%;
   display:flex;
-  justify-content:center;
-  gap:15px;
-  margin:15px 0;
-  flex-wrap:wrap;
+  gap:10px;
 }
 
 .download-buttons button{
-  padding:10px 18px;
-  background:linear-gradient(135deg,#0066ff,#00aaff);
+  padding:8px 14px;
+  background:#0066ff;
   color:#fff;
   border:none;
-  border-radius:25px;
   cursor:pointer;
-  font-size:14px;
-  font-weight:600;
-  transition:0.3s;
 }
 
-.download-buttons button:hover{
-  transform:scale(1.05);
-  box-shadow:0 4px 10px rgba(0,0,0,0.2);
-}
+/* ================= POSTER ================= */
 
-/* ================= POSTER STYLE ================= */
+.poster-wrapper{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  overflow-x:auto;
+}
 
 .quote-page{
   width:800px;
   background:#fff;
   border:2px solid #000;
   padding:20px;
-  margin:auto;
   position:relative;
-  overflow:hidden;
 }
 
-/* WATERMARK */
+/* Watermark */
 .quote-page::after{
   content:"ALMILAS";
   position:absolute;
@@ -181,8 +134,7 @@ body{
   transform:translate(-50%,-50%) rotate(-30deg);
   font-size:90px;
   font-weight:900;
-  color:rgba(0,0,0,0.05);
-  white-space:nowrap;
+  color:rgba(0,0,0,0.06);
   pointer-events:none;
 }
 
@@ -199,9 +151,9 @@ body{
   width:200px;
 }
 
-.quote-header p{
-  font-size:13px;
+.contact{
   text-align:right;
+  font-size:13px;
 }
 
 /* INFO TABLE */
@@ -213,8 +165,8 @@ body{
 }
 
 .info-table div{
-  padding:6px 10px;
   border:1px solid #000;
+  padding:6px 8px;
   font-size:14px;
 }
 
@@ -222,12 +174,13 @@ body{
 .menu-title{
   text-align:center;
   margin:20px 0;
-  text-decoration:underline;
   font-size:20px;
+  letter-spacing:5px;      /* LETTER GAP */
+  text-decoration:underline;
   font-weight:700;
 }
 
-/* MENU BODY */
+/* MENU */
 .menu-body{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -235,10 +188,10 @@ body{
 }
 
 .menu-body h3{
-  font-size:15px;
   margin-top:15px;
+  font-size:14px;
+  letter-spacing:2px;     /* LETTER GAP */
   text-decoration:underline;
-  font-weight:700;
 }
 
 .menu-body p{
@@ -246,58 +199,60 @@ body{
   margin:3px 0;
 }
 
-/* ================= MOBILE RESPONSIVE ================= */
+/* RATE */
+.rate-box{
+  margin-top:25px;
+  text-align:center;
+  font-size:16px;
+  color:#0051ff;
+  font-weight:bold;
+  letter-spacing:2px;
+  border-top:1px solid #ccc;
+  padding-top:10px;
+}
 
-@media (max-width: 900px){
+/* ================= RESPONSIVE ================= */
+/* Keep same desktop design – only scale */
+
+@media(max-width:900px){
   .quote-page{
-    width:100%;
+    transform:scale(0.9);
+    transform-origin:top center;
   }
 }
 
-@media (max-width: 600px){
-  .form-box{
-    width:100%;
-  }
-
-  .menu-body{
-    grid-template-columns:1fr;
-  }
-
-  .quote-header{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .quote-header p{
-    text-align:left;
-    margin-top:5px;
-  }
-
-  .quote-page::after{
-    font-size:60px;
+@media(max-width:700px){
+  .quote-page{
+    transform:scale(0.8);
   }
 }
 
-/* ================= PRINT ONLY POSTER ================= */
+@media(max-width:500px){
+  .quote-page{
+    transform:scale(0.7);
+  }
+}
 
-@media print {
-  body * {
-    visibility: hidden;
+/* ================= PRINT ================= */
+
+@media print{
+  body *{
+    visibility:hidden;
   }
 
-  .quote-page, .quote-page * {
-    visibility: visible;
+  .quote-page, .quote-page *{
+    visibility:visible;
   }
 
-  .quote-page {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
+  .quote-page{
+    position:absolute;
+    left:0;
+    top:0;
+    transform:scale(1);
   }
 
-  .download-buttons,
-  .form-box{
+  .form-box,
+  .download-buttons{
     display:none;
   }
 }

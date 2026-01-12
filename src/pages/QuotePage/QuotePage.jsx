@@ -42,18 +42,20 @@ const QuotePage = () => {
   const generatePoster = () => setShowPoster(true);
 
   const downloadImage = async () => {
-    const canvas = await html2canvas(posterRef.current);
+    const canvas = await html2canvas(posterRef.current, { scale: 2 });
     const link = document.createElement("a");
     link.download = "quotation.png";
-    link.href = canvas.toDataURL();
+    link.href = canvas.toDataURL("image/png");
     link.click();
   };
 
   const downloadPDF = async () => {
-    const canvas = await html2canvas(posterRef.current);
+    const canvas = await html2canvas(posterRef.current, { scale: 2 });
     const imgData = canvas.toDataURL("image/png");
     const pdf = new jsPDF("p", "mm", "a4");
-    pdf.addImage(imgData, "PNG", 10, 10, 190, 0);
+    const width = 190;
+    const height = (canvas.height * width) / canvas.width;
+    pdf.addImage(imgData, "PNG", 10, 10, width, height);
     pdf.save("quotation.pdf");
   };
 
@@ -80,12 +82,12 @@ const QuotePage = () => {
 
       {!showPoster && (
         <div className="form-box">
-          <h2>Quotation Form</h2>
+          <h2>QUOTATION FORM</h2>
 
           <input type="date" name="date" onChange={handleChange} />
           <input placeholder="Customer Name" name="customer" onChange={handleChange} />
           <input placeholder="Venue" name="venue" onChange={handleChange} />
-          <input placeholder="Time" name="time" onChange={handleChange} />
+          <input placeholder="Time (5PM - 8PM)" name="time" onChange={handleChange} />
           <input placeholder="Nos" name="nos" onChange={handleChange} />
           <input placeholder="Advance" name="advance" onChange={handleChange} />
 
@@ -132,7 +134,7 @@ const QuotePage = () => {
             items={["Ginger", "Mint", "Hibiscus", "Lavender", "Lemongrass"]}
           />
 
-          <button onClick={generatePoster}>Generate Poster</button>
+          <button onClick={generatePoster}>GENERATE POSTER</button>
         </div>
       )}
 
@@ -144,47 +146,53 @@ const QuotePage = () => {
             <button onClick={printPoster}>Print</button>
           </div>
 
-          <div className="quote-page" ref={posterRef}>
-            <div className="quote-header">
-              <img src={logo} className="logo" />
-              <div>
-                <p>96 56 96 5553</p>
-                <p>naturaleventspkd@gmail.com</p>
-              </div>
-            </div>
-
-            <div className="info-table">
-              <div>DATE : {form.date}</div>
-              <div>CUSTOMER : {form.customer}</div>
-              <div>VENUE : {form.venue}</div>
-              <div>TIME : {form.time}</div>
-              <div>NOS : {form.nos}</div>
-              <div>ADVANCE : {form.advance}</div>
-            </div>
-
-            <h2 className="menu-title">MENU - 1</h2>
-
-            <div className="menu-body">
-              <div>
-                <h3>WELCOME DRINK</h3>
-                {form.welcomeDrink.map((i, k) => <p key={k}>{i}</p>)}
-
-                <h3>MAIN COURSE</h3>
-                {form.mainCourse.map((i, k) => <p key={k}>{i}</p>)}
-
-                <h3>DOSA COUNTER</h3>
-                {form.dosaCounter.map((i, k) => <p key={k}>{i}</p>)}
+          <div className="poster-wrapper">
+            <div className="quote-page" ref={posterRef}>
+              <div className="quote-header">
+                <img src={logo} className="logo" alt="logo" />
+                <div className="contact">
+                  <p>📞 96 56 96 5553</p>
+                  <p>✉ naturaleventspkd@gmail.com</p>
+                </div>
               </div>
 
-              <div>
-                <h3>DESSERT</h3>
-                {form.dessert.map((i, k) => <p key={k}>{i}</p>)}
+              <div className="info-table">
+                <div>DATE : {form.date}</div>
+                <div>CUSTOMER : {form.customer}</div>
+                <div>VENUE : {form.venue}</div>
+                <div>TIME : {form.time}</div>
+                <div>NOS : {form.nos}</div>
+                <div>ADVANCE : {form.advance}</div>
+              </div>
 
-                <h3>HERBAL TEA</h3>
-                {form.herbalTea.map((i, k) => <p key={k}>{i}</p>)}
+              <h2 className="menu-title">MENU - 1</h2>
 
-                <h3>SALAD BAR</h3>
-                {form.saladBar.map((i, k) => <p key={k}>{i}</p>)}
+              <div className="menu-body">
+                <div>
+                  <h3>WELCOME DRINK</h3>
+                  {form.welcomeDrink.map((i, k) => <p key={k}>{i}</p>)}
+
+                  <h3>MAIN COURSE</h3>
+                  {form.mainCourse.map((i, k) => <p key={k}>{i}</p>)}
+
+                  <h3>DOSA COUNTER</h3>
+                  {form.dosaCounter.map((i, k) => <p key={k}>{i}</p>)}
+                </div>
+
+                <div>
+                  <h3>DESSERT</h3>
+                  {form.dessert.map((i, k) => <p key={k}>{i}</p>)}
+
+                  <h3>HERBAL TEA</h3>
+                  {form.herbalTea.map((i, k) => <p key={k}>{i}</p>)}
+
+                  <h3>SALAD BAR</h3>
+                  {form.saladBar.map((i, k) => <p key={k}>{i}</p>)}
+                </div>
+              </div>
+
+              <div className="rate-box">
+                RATE : 250/- (SERVICE AND TRANSPORTATION INCLUDED)
               </div>
             </div>
           </div>
