@@ -203,3 +203,39 @@ body {
     width:100%;
   }
 }
+.simple-form button{
+  width:100%;
+  padding:12px;
+  margin-top:12px;
+  background:#000;
+  color:#fff;
+  border:none;
+  font-size:14px;
+  letter-spacing:2px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.simple-form button:hover{
+  background:#222;
+}
+/* DOWNLOAD IMAGE BUTTON */
+
+.download-btn{
+  background: #000;
+  color: #fff;
+  padding: 12px 24px;
+  border: 2px solid #c9a13a;
+  font-size: 14px;
+  font-family: "Cinzel", serif;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover{
+  background: #c9a13a;
+  color: #000;
+  border-color: #000;
+}
