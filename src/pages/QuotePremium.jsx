@@ -123,7 +123,15 @@ export default function QuotePremium() {
           <CheckboxGroup
             title="1. Welcome Drink"
             name="welcomeDrink"
-            items={['Mango Purple', 'Pista Juice',"Fresh Lime", "Orange", "Watermelon", "Pineapple", "Tender Coconut"]}
+            items={[
+              'Mango Purple',
+              'Pista Juice',
+              'Fresh Lime',
+              'Orange',
+              'Watermelon',
+              'Pineapple',
+              'Tender Coconut',
+            ]}
             selectedItems={form.welcomeDrink}
             onToggle={handleCheckboxToggle}
           />
@@ -331,8 +339,8 @@ export default function QuotePremium() {
 
                   <div className="menu-grid">
                     {form.welcomeDrink.length > 0 && (
-                      <div className="menu-card">
-                        <h3>Welcome Drink</h3>
+                      <div  className="menu-card">
+                        <h3>WELCOME DRINK</h3>
                         <ul>
                           {form.welcomeDrink.map((item, idx) => (
                             <li key={idx}>{item}</li>
@@ -343,7 +351,7 @@ export default function QuotePremium() {
 
                     {form.mainCourse.length > 0 && (
                       <div className="menu-card">
-                        <h3>Main Course</h3>
+                        <h3>MAIN COURSE</h3>
                         <ul>
                           {form.mainCourse.map((item, idx) => (
                             <li key={idx}>{item}</li>
@@ -354,7 +362,7 @@ export default function QuotePremium() {
 
                     {form.salads.length > 0 && (
                       <div className="menu-card">
-                        <h3>Salads & Pickles</h3>
+                        <h3>SALADS & PICKLES</h3>
                         <ul>
                           {form.salads.map((item, idx) => (
                             <li key={idx}>{item}</li>
@@ -365,7 +373,7 @@ export default function QuotePremium() {
 
                     {form.sideDish.length > 0 && (
                       <div className="menu-card">
-                        <h3>Side Dishes</h3>
+                        <h3>SIDE DISHES</h3>
                         <ul>
                           {form.sideDish.map((item, idx) => (
                             <li key={idx}>{item}</li>
@@ -376,7 +384,7 @@ export default function QuotePremium() {
 
                     {form.breadItems.length > 0 && (
                       <div className="menu-card">
-                        <h3>Bread & Dosa</h3>
+                        <h3>BREAD & DOSA</h3>
                         <ul>
                           {form.breadItems.map((item, idx) => (
                             <li key={idx}>{item}</li>
@@ -387,7 +395,7 @@ export default function QuotePremium() {
 
                     {form.curries.length > 0 && (
                       <div className="menu-card">
-                        <h3>Curries</h3>
+                        <h3>CURRIES</h3>
                         <ul>
                           {form.curries.map((item, idx) => (
                             <li key={idx}>{item}</li>
@@ -398,7 +406,7 @@ export default function QuotePremium() {
 
                     {form.desserts.length > 0 && (
                       <div className="menu-card">
-                        <h3>Desserts & Extras</h3>
+                        <h3>DESSERTS & EXTRAS</h3>
                         <ul>
                           {form.desserts.map((item, idx) => (
                             <li key={idx}>{item}</li>
@@ -409,7 +417,7 @@ export default function QuotePremium() {
 
                     {form.vegItems.length > 0 && (
                       <div className="menu-card">
-                        <h3>Veg Items</h3>
+                        <h3>VEG ITEMS</h3>
                         <ul>
                           {form.vegItems.map((item, idx) => (
                             <li key={idx}>{item}</li>
@@ -420,7 +428,7 @@ export default function QuotePremium() {
 
                     {form.cateringTeams.length > 0 && (
                       <div className="menu-card">
-                        <h3>Catering Service</h3>
+                        <h3>CATERING SERVICE</h3>
                         <ul>
                           {form.cateringTeams.map((item, idx) => (
                             <li key={idx}>{item}</li>
@@ -433,7 +441,6 @@ export default function QuotePremium() {
 
                 {form.message && (
                   <div className="letter-notes">
-                    <h4>Special Instructions:</h4>
                     <p>{form.message}</p>
                   </div>
                 )}

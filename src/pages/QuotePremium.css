@@ -210,22 +210,7 @@ textarea {
   border-right: 1.5px solid var(--gold);
 }
 
-/* Menu Display Styling */
-.menu-header {
-  text-align: center;
-  font-size: 24px;
-  border-bottom: 2px solid var(--gold);
-  margin-bottom: 25px;
-  padding-bottom: 5px;
-  font-weight: bold;
-  color: var(--gold);
-}
 
-.menu-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-}
 
 .menu-card h3 {
   color: var(--gold);
@@ -250,14 +235,13 @@ textarea {
 
 .letter-notes {
   margin-top: 30px;
-  padding: 15px;
-  background: #fdfaf5;
+  text-align: center;
   border-radius: 4px;
 }
 
 /* Signature Section */
 .footer-sig {
-  margin-top: 60px;
+  margin-top: 10px;
   text-align: right;
 }
 
@@ -433,64 +417,51 @@ textarea {
 }
 
 
+/* 3 column flowing layout like your image */
 .menu-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  align-items: start;           /* prevents equal-height stretch */
+  column-count: 3;
+  column-gap: 60px;
+  padding-top: 0;
 }
 
-/* Individual cards */
 .menu-card {
-  background: #fffdf8;
-  border: 1px solid #e3d5b8;
-  padding: 5px 16px;
-  height: fit-content;          /* card height = content height */
-  align-self: start;
-  
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  break-inside: avoid;
+  margin: 0 0 28px 0;   /* remove top margin */
+  padding: 0;
+  background: none;
+  border: none;
 }
 
-/* Card titles */
+/* Remove extra gap on very first card */
+.menu-grid .menu-card:first-child {
+  margin-top: 0;
+}
+
+/* Also tighten heading spacing */
 .menu-card h3 {
-  font-family: "Times New Roman", serif;
-  font-size: 17px;
-  color: #8b5e2b;
-  border-bottom: 1px solid #d6b98c;
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #caa46a;
   padding-bottom: 4px;
-  margin-bottom: 8px;
 }
 
 /* Lists */
-.menu-card ul {
+.menu-card ul{
   list-style: none;
   padding: 0;
   margin: 0;
-  padding-left: 10px;
 }
 
-/* List items */
-.menu-card li {
+.menu-card li{
   font-size: 14px;
-  padding: 4px 0 6px 12px;
-  border-bottom: 1px dashed #e6dccb;
-  color: #333;
-  position: relative;
+  line-height: 1.6;
+  padding: 2px 0;
+  color: #222;
+  padding-left: 13px;
 }
-
-.menu-card li:last-child {
-  border-bottom: none;
-}
-
-/* Small gold bullet effect */
-.menu-card li::before {
-  content: "•";
-  color: #b08a4f;
-  position: absolute;
-  left: 0;
-  top: 4px;
-}
-
 
 /* Decorations */
 .top-accent-bar {
