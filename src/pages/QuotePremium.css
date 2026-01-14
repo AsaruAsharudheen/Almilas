@@ -177,7 +177,7 @@ textarea {
 
 /* --- Content Body (Times New Roman) --- */
 .content-body {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-left: 10px;
   font-family: var(--main-serif);
 }
@@ -391,8 +391,8 @@ textarea {
 .info-item {
   display: flex;
   align-items: center;
-  gap: 12px; /* Space between icon and text */
-  margin-bottom: 6px;
+  gap: 8px; /* Space between icon and text */
+  /* margin-bottom: px; */
 }
 
 .icon-gold {
@@ -403,7 +403,7 @@ textarea {
 
 /* Content Body - TIMES NEW ROMAN */
 .content-body {
-  margin-top: 110px;
+  margin-top: 70px;
   font-family: var(--main-serif);
 }
 
@@ -418,30 +418,79 @@ textarea {
   font-size: 16px;
   border-right: 1px solid var(--gold);
 }
+.menu-display {
+  margin-top: 30px;
+}
 
 .menu-header {
   text-align: center;
-  font-weight: bold;
-  font-size: 22px;
-  color: var(--gold);
-  border-bottom: 2px solid var(--gold);
+  font-family: "Times New Roman", serif;
+  font-size: 24px;
+  color: #b08a4f;
+  border-bottom: 2px solid #b08a4f;
+  padding-bottom: 8px;
   margin-bottom: 25px;
 }
 
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;           /* prevents equal-height stretch */
+}
+
+/* Individual cards */
+.menu-card {
+  background: #fffdf8;
+  border: 1px solid #e3d5b8;
+  padding: 5px 16px;
+  height: fit-content;          /* card height = content height */
+  align-self: start;
+  
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+/* Card titles */
 .menu-card h3 {
-  font-family: var(--main-serif);
-  font-weight: bold;
-  font-size: 18px;
-  color: var(--gold);
-  border-left: 4px solid var(--gold);
+  font-family: "Times New Roman", serif;
+  font-size: 17px;
+  color: #8b5e2b;
+  border-bottom: 1px solid #d6b98c;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+/* Lists */
+.menu-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   padding-left: 10px;
 }
 
+/* List items */
 .menu-card li {
-  font-size: 16px;
-  border-bottom: 1px dashed #eee;
-  padding: 3px 0;
+  font-size: 14px;
+  padding: 4px 0 6px 12px;
+  border-bottom: 1px dashed #e6dccb;
+  color: #333;
+  position: relative;
 }
+
+.menu-card li:last-child {
+  border-bottom: none;
+}
+
+/* Small gold bullet effect */
+.menu-card li::before {
+  content: "•";
+  color: #b08a4f;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
 
 /* Decorations */
 .top-accent-bar {
@@ -450,8 +499,9 @@ textarea {
   left: 0;
   width: 55%;
   height: 24px;
-  background: var(--gold);
+  background: #9d7c4b;
   border-radius: 0 15px 15px 0;
+  z-index: 1111;
 }
 
 .footer-gold-shape {
@@ -465,7 +515,7 @@ textarea {
 
 /* ===== ROOT COLORS ===== */
 :root{
-  --gold:#c89b3c;
+  --gold:#9d7c4b;
   --gold-dark:#a87f2b;
   --cream:#fdfaf4;
   --paper:#fffdfa;

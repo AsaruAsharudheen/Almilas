@@ -123,7 +123,7 @@ export default function QuotePremium() {
           <CheckboxGroup
             title="1. Welcome Drink"
             name="welcomeDrink"
-            items={['Mango Purple', 'Pista Juice']}
+            items={['Mango Purple', 'Pista Juice',"Fresh Lime", "Orange", "Watermelon", "Pineapple", "Tender Coconut"]}
             selectedItems={form.welcomeDrink}
             onToggle={handleCheckboxToggle}
           />
@@ -132,7 +132,9 @@ export default function QuotePremium() {
             name="mainCourse"
             items={[
               'Beef Biryani',
-              'Chicken Biryani','Chicken Surbiyani','Beef Surbiyani',
+              'Chicken Biryani',
+              'Chicken Surbiyani',
+              'Beef Surbiyani',
               'Beef Kuzhimanthi',
               'Chicken Kuzhimanthi',
               'Beef Majboos',
@@ -326,35 +328,105 @@ export default function QuotePremium() {
 
                 <div className="menu-display">
                   <h2 className="menu-header">SELECTED MENU</h2>
+
                   <div className="menu-grid">
-                    {Object.entries({
-                      '1. Welcome Drink': form.welcomeDrink,
-                      '2. Main Course': form.mainCourse,
-                      '3 & 4. Salads & Side Dishes': [
-                        ...form.salads,
-                        ...form.sideDish,
-                      ],
-                      '5 & 6. Breads & Curries': [
-                        ...form.breadItems,
-                        ...form.curries,
-                      ],
-                      '7 & 8. Desserts & Veg': [
-                        ...form.desserts,
-                        ...form.vegItems,
-                      ],
-                      'Catering Service': form.cateringTeams,
-                    }).map(
-                      ([title, items]) =>
-                        items.length > 0 && (
-                          <div key={title} className="menu-card">
-                            <h3>{title}</h3>
-                            <ul>
-                              {items.map((item, idx) => (
-                                <li key={idx}>{item}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        )
+                    {form.welcomeDrink.length > 0 && (
+                      <div className="menu-card">
+                        <h3>Welcome Drink</h3>
+                        <ul>
+                          {form.welcomeDrink.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {form.mainCourse.length > 0 && (
+                      <div className="menu-card">
+                        <h3>Main Course</h3>
+                        <ul>
+                          {form.mainCourse.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {form.salads.length > 0 && (
+                      <div className="menu-card">
+                        <h3>Salads & Pickles</h3>
+                        <ul>
+                          {form.salads.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {form.sideDish.length > 0 && (
+                      <div className="menu-card">
+                        <h3>Side Dishes</h3>
+                        <ul>
+                          {form.sideDish.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {form.breadItems.length > 0 && (
+                      <div className="menu-card">
+                        <h3>Bread & Dosa</h3>
+                        <ul>
+                          {form.breadItems.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {form.curries.length > 0 && (
+                      <div className="menu-card">
+                        <h3>Curries</h3>
+                        <ul>
+                          {form.curries.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {form.desserts.length > 0 && (
+                      <div className="menu-card">
+                        <h3>Desserts & Extras</h3>
+                        <ul>
+                          {form.desserts.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {form.vegItems.length > 0 && (
+                      <div className="menu-card">
+                        <h3>Veg Items</h3>
+                        <ul>
+                          {form.vegItems.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {form.cateringTeams.length > 0 && (
+                      <div className="menu-card">
+                        <h3>Catering Service</h3>
+                        <ul>
+                          {form.cateringTeams.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
                     )}
                   </div>
                 </div>
@@ -365,8 +437,6 @@ export default function QuotePremium() {
                     <p>{form.message}</p>
                   </div>
                 )}
-
-              
               </main>
 
               <footer className="footer-bar-container">
