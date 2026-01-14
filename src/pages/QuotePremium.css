@@ -157,7 +157,7 @@ textarea {
 /* Visual Decorations */
 .top-accent-bar {
   position: absolute;
-  top: 145px;
+  top: 125px;
   left: 0;
   width: 75%;
   height: 22px;
@@ -167,17 +167,17 @@ textarea {
 
 .left-vertical-line {
   position: absolute;
-  left: 45px;
+  left: 35px;
   top: 0;
   bottom: 0;
-  width: 1px;
+  width: 1.5px;
   background: var(--gold);
   opacity: 0.6;
 }
 
 /* --- Content Body (Times New Roman) --- */
 .content-body {
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 10px;
   font-family: var(--main-serif);
 }
@@ -234,9 +234,10 @@ textarea {
 }
 
 .letter-notes {
-  margin-top: 30px;
+  /* margin-top: 0px; */
   text-align: center;
   border-radius: 4px;
+  padding-bottom: 10px;
 }
 
 /* Signature Section */
@@ -260,6 +261,7 @@ textarea {
   right: 0;
   display: flex;
   justify-content: center;
+  background-color: var(--gold);
 }
 
 .footer-gold-shape {
@@ -267,6 +269,8 @@ textarea {
   height: 20px;
   background: var(--gold);
   border-radius: 12px 12px 0 0;
+  position: relative;
+  bottom: 10px;
 }
 
 /* --- Preview Controls --- */
@@ -340,11 +344,11 @@ textarea {
 /* Letterhead Paper */
 .letterhead-paper {
   width: 210mm;
-  min-height: 297mm;
+  min-height: 299mm;
   background: white;
   position: relative;
   box-sizing: border-box;
-  padding: 40px 60px;
+  padding: 20px 60px;
   color: var(--dark);
   font-family: var(--main-serif); /* Main body uses Times New Roman */
 }
@@ -387,14 +391,14 @@ textarea {
 
 /* Content Body - TIMES NEW ROMAN */
 .content-body {
-  margin-top: 70px;
+  margin-top: 50px;
   font-family: var(--main-serif);
 }
 
 .info-table {
   width: 100%;
   border: 1.5px solid var(--gold);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .table-cell {
@@ -403,7 +407,7 @@ textarea {
   border-right: 1px solid var(--gold);
 }
 .menu-display {
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 .menu-header {
@@ -466,7 +470,7 @@ textarea {
 /* Decorations */
 .top-accent-bar {
   position: absolute;
-  top: 145px;
+  top: 120px;
   left: 0;
   width: 55%;
   height: 24px;
@@ -669,3 +673,34 @@ textarea {
 .hii{
   padding-top: 20px;
 }
+
+
+
+.letter-notes {
+  /* margin-top: 0px; */
+  text-align: left;
+}
+
+.letter-notes p {
+  font-family: "Times New Roman", serif;
+  font-size: 15px;
+  color: #6b4b28;
+  display: inline-block;
+  /* padding: 8px 28px; */
+  letter-spacing: 0.5px;
+  font-style: italic;
+  position: relative;
+}
+
+/* Center dot decoration */
+.letter-notes p::before {
+  content: "•";
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #caa46a;
+  font-size: 18px;
+}
+
+
