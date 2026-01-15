@@ -88,18 +88,6 @@ textarea {
   cursor: pointer;
 }
 
-/* --- Letterhead Paper (Capture Area) --- */
-.letterhead-paper {
-  width: 210mm;
-  min-height: 297mm;
-  background: white;
-  position: relative;
-  box-sizing: border-box;
-  padding: 40px 60px;
-  flex-shrink: 0;
-  color: var(--dark);
-  font-family: var(--main-serif); /* Default everything to Times New Roman */
-}
 
 /* Header Section */
 .header {
@@ -344,7 +332,7 @@ textarea {
 /* Letterhead Paper */
 .letterhead-paper {
   width: 210mm;
-  min-height: 299mm;
+  min-height: 343mm;
   background: white;
   position: relative;
   box-sizing: border-box;

@@ -151,6 +151,8 @@ export default function QuotePremium() {
               'Chicken Kabsa',
               'Gee Rice + Chicken Curry',
               'Gee Rice + Beef Curry',
+              'Thenga choru + Beef',
+              'Thenga choru + Chicken',
             ]}
             selectedItems={form.mainCourse}
             onToggle={handleCheckboxToggle}
@@ -234,6 +236,7 @@ export default function QuotePremium() {
               'Mysore Pak',
               'Fruit Salad',
               'Chocolate Parfait',
+              'Tea Stall'
             ]}
             selectedItems={form.desserts}
             onToggle={handleCheckboxToggle}
