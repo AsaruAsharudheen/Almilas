@@ -667,6 +667,7 @@ textarea {
 .letter-notes {
   /* margin-top: 0px; */
   text-align: left;
+  padding-top: 130px;
 }
 
 .letter-notes p {
