@@ -336,7 +336,7 @@ textarea {
   background: white;
   position: relative;
   box-sizing: border-box;
-  padding: 20px 60px;
+  padding: 20px 50px;
   color: var(--dark);
   font-family: var(--main-serif); /* Main body uses Times New Roman */
 }
@@ -412,7 +412,7 @@ textarea {
 /* 3 column flowing layout like your image */
 .menu-grid {
   column-count: 3;
-  column-gap: 60px;
+  column-gap: 30px;
   padding-top: 0;
 }
 
