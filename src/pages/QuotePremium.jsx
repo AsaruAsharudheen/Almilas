@@ -364,11 +364,11 @@ export default function QuotePremium() {
                     )}
 
          
-      {form.cateringTeams.length > 0 && (
+             {form.curries.length > 0 && (
                       <div className="menu-card">
-                        <h3>CATERING SERVICE</h3>
+                        <h3>CURRIES</h3>
                         <ul>
-                          {form.cateringTeams.map((item, idx) => (
+                          {form.curries.map((item, idx) => (
                             <li key={idx}>{item}</li>
                           ))}
                         </ul>
@@ -429,17 +429,17 @@ export default function QuotePremium() {
                       </div>
                     )}
                      
-                       {form.curries.length > 0 && (
+             
+      {form.cateringTeams.length > 0 && (
                       <div className="menu-card">
-                        <h3>CURRIES</h3>
+                        <h3>CATERING SERVICE</h3>
                         <ul>
-                          {form.curries.map((item, idx) => (
+                          {form.cateringTeams.map((item, idx) => (
                             <li key={idx}>{item}</li>
                           ))}
                         </ul>
                       </div>
                     )}
-
                   </div>
                 </div>
 
