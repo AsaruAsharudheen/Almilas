@@ -131,6 +131,11 @@ export default function QuotePremium() {
               'Watermelon',
               'Pineapple',
               'Tender Coconut',
+              'Papaya',
+              'Grape',
+              'Carrot',
+              'Apple',
+              'Guava',
             ]}
             selectedItems={form.welcomeDrink}
             onToggle={handleCheckboxToggle}
@@ -143,8 +148,8 @@ export default function QuotePremium() {
               'Chicken Biryani',
               'Chicken Surbiyani',
               'Beef Surbiyani',
-              'Beef Kuzhimanthi',
-              'Chicken Kuzhimanthi',
+              'Beef manthi',
+              'Chicken manthi',
               'Beef Majboos',
               'Chicken Majboos',
               'Beef Kabsa',
@@ -236,7 +241,9 @@ export default function QuotePremium() {
               'Mysore Pak',
               'Fruit Salad',
               'Chocolate Parfait',
-              'Tea Stall'
+              'Tea Stall',
+              'Carrot Halwa',
+              'Puddings',
             ]}
             selectedItems={form.desserts}
             onToggle={handleCheckboxToggle}
@@ -251,7 +258,17 @@ export default function QuotePremium() {
           <CheckboxGroup
             title="Catering Teams"
             name="cateringTeams"
-            items={['Plates', 'Bottle Water', 'Counters', 'Table Cloth']}
+            items={[
+              'Plates',
+              'Bottle Water',
+              'Counters',
+              'Table Cloth',
+              'Catering boys',
+              'Supervisor',
+              'Hosting girls',
+              'Hosting boys',
+              'Security',
+            ]}
             selectedItems={form.cateringTeams}
             onToggle={handleCheckboxToggle}
           />
@@ -342,7 +359,7 @@ export default function QuotePremium() {
 
                   <div className="menu-grid">
                     {form.welcomeDrink.length > 0 && (
-                      <div  className="menu-card">
+                      <div className="menu-card">
                         <h3>WELCOME DRINK</h3>
                         <ul>
                           {form.welcomeDrink.map((item, idx) => (
@@ -363,8 +380,7 @@ export default function QuotePremium() {
                       </div>
                     )}
 
-         
-             {form.curries.length > 0 && (
+                    {form.curries.length > 0 && (
                       <div className="menu-card">
                         <h3>CURRIES</h3>
                         <ul>
@@ -396,8 +412,6 @@ export default function QuotePremium() {
                       </div>
                     )}
 
-              
-
                     {form.desserts.length > 0 && (
                       <div className="menu-card">
                         <h3>DESSERTS & EXTRAS</h3>
@@ -408,7 +422,7 @@ export default function QuotePremium() {
                         </ul>
                       </div>
                     )}
-                             {form.salads.length > 0 && (
+                    {form.salads.length > 0 && (
                       <div className="menu-card">
                         <h3>SALADS & PICKLES</h3>
                         <ul>
@@ -429,9 +443,8 @@ export default function QuotePremium() {
                         </ul>
                       </div>
                     )}
-                     
-             
-      {form.cateringTeams.length > 0 && (
+
+                    {form.cateringTeams.length > 0 && (
                       <div className="menu-card">
                         <h3>CATERING SERVICE</h3>
                         <ul>
