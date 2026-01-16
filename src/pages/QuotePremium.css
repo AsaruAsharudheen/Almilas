@@ -332,7 +332,7 @@ textarea {
 /* Letterhead Paper */
 .letterhead-paper {
   width: 210mm;
-  min-height: 343mm;
+  min-height: 353mm;
   background: white;
   position: relative;
   box-sizing: border-box;

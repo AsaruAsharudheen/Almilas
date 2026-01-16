@@ -412,11 +412,11 @@ export default function QuotePremium() {
                       </div>
                     )}
 
-                    {form.desserts.length > 0 && (
+                      {form.vegItems.length > 0 && (
                       <div className="menu-card">
-                        <h3>DESSERTS & EXTRAS</h3>
+                        <h3>VEG ITEMS</h3>
                         <ul>
-                          {form.desserts.map((item, idx) => (
+                          {form.vegItems.map((item, idx) => (
                             <li key={idx}>{item}</li>
                           ))}
                         </ul>
@@ -433,11 +433,12 @@ export default function QuotePremium() {
                       </div>
                     )}
 
-                    {form.vegItems.length > 0 && (
+            
+                            {form.desserts.length > 0 && (
                       <div className="menu-card">
-                        <h3>VEG ITEMS</h3>
+                        <h3>DESSERTS & EXTRAS</h3>
                         <ul>
-                          {form.vegItems.map((item, idx) => (
+                          {form.desserts.map((item, idx) => (
                             <li key={idx}>{item}</li>
                           ))}
                         </ul>
