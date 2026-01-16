@@ -205,7 +205,7 @@ textarea {
   font-size: 18px;
   border-left: 4px solid var(--gold);
   padding-left: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-weight: bold;
 }
 
@@ -432,12 +432,12 @@ textarea {
 /* Also tighten heading spacing */
 .menu-card h3 {
   margin-top: 0;
-  margin-bottom: 6px;
+  margin-bottom: 1px;
   font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
   border-bottom: 1px solid #caa46a;
-  padding-bottom: 4px;
+  padding-bottom: 2px;
 }
 
 /* Lists */
@@ -638,6 +638,7 @@ textarea {
   .mobile-form-grid{
     grid-template-columns:1fr;
   }
+  
 
   .form-container{
     padding:20px;

@@ -380,26 +380,29 @@ export default function QuotePremium() {
                       </div>
                     )}
 
-                    {form.curries.length > 0 && (
+             
+                         {form.vegItems.length > 0 && (
                       <div className="menu-card">
-                        <h3>CURRIES</h3>
+                        <h3>VEG ITEMS</h3>
                         <ul>
-                          {form.curries.map((item, idx) => (
+                          {form.vegItems.map((item, idx) => (
                             <li key={idx}>{item}</li>
                           ))}
                         </ul>
                       </div>
                     )}
-                    {form.sideDish.length > 0 && (
+           
+                            {form.salads.length > 0 && (
                       <div className="menu-card">
-                        <h3>SIDE DISHES</h3>
+                        <h3>SALADS & PICKLES</h3>
                         <ul>
-                          {form.sideDish.map((item, idx) => (
+                          {form.salads.map((item, idx) => (
                             <li key={idx}>{item}</li>
                           ))}
                         </ul>
                       </div>
                     )}
+
 
                     {form.breadItems.length > 0 && (
                       <div className="menu-card">
@@ -412,21 +415,21 @@ export default function QuotePremium() {
                       </div>
                     )}
 
-                      {form.vegItems.length > 0 && (
+                    {form.curries.length > 0 && (
                       <div className="menu-card">
-                        <h3>VEG ITEMS</h3>
+                        <h3>CURRIES</h3>
                         <ul>
-                          {form.vegItems.map((item, idx) => (
+                          {form.curries.map((item, idx) => (
                             <li key={idx}>{item}</li>
                           ))}
                         </ul>
                       </div>
                     )}
-                    {form.salads.length > 0 && (
+                      {form.sideDish.length > 0 && (
                       <div className="menu-card">
-                        <h3>SALADS & PICKLES</h3>
+                        <h3>SIDE DISHES</h3>
                         <ul>
-                          {form.salads.map((item, idx) => (
+                          {form.sideDish.map((item, idx) => (
                             <li key={idx}>{item}</li>
                           ))}
                         </ul>
