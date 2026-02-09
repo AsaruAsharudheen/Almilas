@@ -136,6 +136,7 @@ export default function QuotePremium() {
               'Carrot',
               'Apple',
               'Guava',
+              'Shamam',
             ]}
             selectedItems={form.welcomeDrink}
             onToggle={handleCheckboxToggle}
@@ -156,6 +157,9 @@ export default function QuotePremium() {
               'Chicken Kabsa',
               'Gee Rice + Chicken Curry',
               'Gee Rice + Beef Curry',
+              'Mutton Biryani',
+              'Mutton Manthi',
+              'Manthi rice',
               'Thenga choru + Beef',
               'Thenga choru + Chicken',
             ]}
@@ -380,8 +384,7 @@ export default function QuotePremium() {
                       </div>
                     )}
 
-             
-                         {form.vegItems.length > 0 && (
+                    {form.vegItems.length > 0 && (
                       <div className="menu-card">
                         <h3>VEG ITEMS</h3>
                         <ul>
@@ -391,8 +394,8 @@ export default function QuotePremium() {
                         </ul>
                       </div>
                     )}
-           
-                            {form.salads.length > 0 && (
+
+                    {form.salads.length > 0 && (
                       <div className="menu-card">
                         <h3>SALADS & PICKLES</h3>
                         <ul>
@@ -402,7 +405,6 @@ export default function QuotePremium() {
                         </ul>
                       </div>
                     )}
-
 
                     {form.breadItems.length > 0 && (
                       <div className="menu-card">
@@ -425,7 +427,7 @@ export default function QuotePremium() {
                         </ul>
                       </div>
                     )}
-                      {form.sideDish.length > 0 && (
+                    {form.sideDish.length > 0 && (
                       <div className="menu-card">
                         <h3>SIDE DISHES</h3>
                         <ul>
@@ -436,8 +438,7 @@ export default function QuotePremium() {
                       </div>
                     )}
 
-            
-                            {form.desserts.length > 0 && (
+                    {form.desserts.length > 0 && (
                       <div className="menu-card">
                         <h3>DESSERTS & EXTRAS</h3>
                         <ul>
